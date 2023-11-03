@@ -10,7 +10,7 @@ WORKDIR $HOME
 
 
 RUN apt update
-RUN apt upgrade
+RUN apt upgrade -y
 
 
 ######### End Customizations ###########
