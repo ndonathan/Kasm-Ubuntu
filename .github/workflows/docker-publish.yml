@@ -28,8 +28,8 @@ jobs:
             file: Dockerfile
           - Name: valmalinux-8-desktop
             file: dockerfile-kasm-almalinux-8-desktop
-          - Name: Default
-            file: dockerfile-kasm-almalinux-9-desktop
+          #- Name: Default
+          #  file: dockerfile-kasm-almalinux-9-desktop
           - Name: Default
             file: dockerfile-kasm-alpine-317-desktop
           - Name: Default
