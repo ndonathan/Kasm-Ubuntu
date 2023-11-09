@@ -1,16 +1,16 @@
 ---
 name: Docker
 on:
-  schedule:
-    - cron: 22 4 * * *
+  #schedule:
+  #  - cron: 22 4 * * *
   push:
     branches:
       - main
     tags:
       - v*.*.*
-  pull_request:
-    branches:
-      - main
+  #pull_request:
+  #  branches:
+  #    - main
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -148,8 +148,8 @@ jobs:
             file: dockerfile-kasm-ubuntu-focal-dind
           - Name: Default
             file: dockerfile-kasm-ubuntu-focal-dind-rootless
-          - Name: Default
-            file: dockerfile-kasm-ubuntu-jammy-desktop
+          #- Name: Default
+          #  file: dockerfile-kasm-ubuntu-jammy-desktop
           - Name: Default
             file: dockerfile-kasm-ubuntu-jammy-dind
           - Name: Default
