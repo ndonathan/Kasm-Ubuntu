@@ -32,7 +32,13 @@ jobs:
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
-
+    strategy:
+	    matrix:
+		    include:
+          - Name: Default
+            file: dockerfile
+          - Name: vsCode
+            file: dockerfile-kasm-vs-code
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -76,7 +82,7 @@ jobs:
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
           context: .
-          file: ./dockerfile-kasm-ubuntu-jammy-desktop
+          file: ${{ matrix.file }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
