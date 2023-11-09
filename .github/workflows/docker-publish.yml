@@ -26,8 +26,150 @@ jobs:
         include:
           - Name: Default
             file: Dockerfile
-          - Name: vsCode
+          - Name: valmalinux-8-desktop
+            file: dockerfile-kasm-almalinux-8-desktop
+          - Name: Default
+            file: dockerfile-kasm-almalinux-9-desktop
+          - Name: Default
+            file: dockerfile-kasm-alpine-317-desktop
+          - Name: Default
+            file: dockerfile-kasm-alpine-318-desktop
+          - Name: Default
+            file: dockerfile-kasm-atom
+          - Name: Default
+            file: dockerfile-kasm-audacity
+          - Name: Default
+            file: dockerfile-kasm-blender
+          - Name: Default
+            file: dockerfile-kasm-brave
+          - Name: Default
+            file: dockerfile-kasm-centos-7-desktop
+          - Name: Default
+            file: dockerfile-kasm-chrome
+          - Name: Default
+            file: dockerfile-kasm-chromium
+          - Name: Default
+            file: dockerfile-kasm-debian-bookworm-desktop
+          - Name: Default
+            file: dockerfile-kasm-debian-bullseye-desktop
+          - Name: Default
+            file: dockerfile-kasm-deluge
+          - Name: Default
+            file: dockerfile-kasm-desktop
+          - Name: Default
+            file: dockerfile-kasm-desktop-deluxe
+          - Name: Default
+            file: dockerfile-kasm-discord
+          - Name: Default
+            file: dockerfile-kasm-doom
+          - Name: Default
+            file: dockerfile-kasm-edge
+          - Name: Default
+            file: dockerfile-kasm-fedora-37-desktop
+          - Name: Default
+            file: dockerfile-kasm-fedora-38-desktop
+          - Name: Default
+            file: dockerfile-kasm-filezilla
+          - Name: Default
+            file: dockerfile-kasm-firefox
+          - Name: Default
+            file: dockerfile-kasm-gimp
+          - Name: Default
+            file: dockerfile-kasm-hunchly
+          - Name: Default
+            file: dockerfile-kasm-inkscape
+          - Name: Default
+            file: dockerfile-kasm-insomnia
+          - Name: Default
+            file: dockerfile-kasm-java-dev
+          - Name: Default
+            file: dockerfile-kasm-kali-rolling-desktop
+          - Name: Default
+            file: dockerfile-kasm-libre-office
+          - Name: Default
+            file: dockerfile-kasm-maltego
+          - Name: Default
+            file: dockerfile-kasm-minetest
+          - Name: Default
+            file: dockerfile-kasm-only-office
+          - Name: Default
+            file: dockerfile-kasm-opensuse-15-desktop
+          - Name: Default
+            file: dockerfile-kasm-oracle-7-desktop
+          - Name: Default
+            file: dockerfile-kasm-oracle-8-desktop
+          - Name: Default
+            file: dockerfile-kasm-oracle-9-desktop
+          - Name: Default
+            file: dockerfile-kasm-parrotos-5-desktop
+          - Name: Default
+            file: dockerfile-kasm-pinta
+          - Name: Default
+            file: dockerfile-kasm-postman
+          - Name: Default
+            file: dockerfile-kasm-qbittorrent
+          - Name: Default
+            file: dockerfile-kasm-realvnc-vncviewer
+          - Name: Default
+            file: dockerfile-kasm-remmina
+          - Name: Default
+            file: dockerfile-kasm-remnux-focal-desktop
+          - Name: Default
+            file: dockerfile-kasm-retroarch
+          - Name: Default
+            file: dockerfile-kasm-rockylinux-8-desktop
+          - Name: Default
+            file: dockerfile-kasm-rockylinux-9-desktop
+          - Name: Default
+            file: dockerfile-kasm-signal
+          - Name: Default
+            file: dockerfile-kasm-slack
+          - Name: Default
+            file: dockerfile-kasm-steam
+          - Name: Default
+            file: dockerfile-kasm-sublime-text
+          - Name: Default
+            file: dockerfile-kasm-super-tux-kart
+          - Name: Default
+            file: dockerfile-kasm-teams
+          - Name: Default
+            file: dockerfile-kasm-telegram
+          - Name: Default
+            file: dockerfile-kasm-terminal
+          - Name: Default
+            file: dockerfile-kasm-thunderbird
+          - Name: Default
+            file: dockerfile-kasm-tor-browser
+          - Name: Default
+            file: dockerfile-kasm-tracelabs
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-focal-desktop
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-focal-dind
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-focal-dind-rootless
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-jammy-desktop
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-jammy-dind
+          - Name: Default
+            file: dockerfile-kasm-ubuntu-jammy-dind-rootless
+          - Name: Default
+            file: dockerfile-kasm-unityhub
+          - Name: Default
+            file: dockerfile-kasm-vivaldi
+          - Name: Default
+            file: dockerfile-kasm-vlc
+          - Name: Default
+            file: dockerfile-kasm-vmware-horizon
+          - Name: Default
             file: dockerfile-kasm-vs-code
+          - Name: Default
+            file: dockerfile-kasm-wine
+          - Name: Default
+            file: dockerfile-kasm-zoom
+          - Name: Default
+            file: dockerfile-kasm-zsnes
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
