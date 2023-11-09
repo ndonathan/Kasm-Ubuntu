@@ -108,8 +108,8 @@ jobs:
             file: dockerfile-kasm-postman
           - Name: Default
             file: dockerfile-kasm-qbittorrent
-          - Name: Default
-            file: dockerfile-kasm-realvnc-vncviewer
+          #- Name: Default
+          #  file: dockerfile-kasm-realvnc-vncviewer
           - Name: Default
             file: dockerfile-kasm-remmina
           - Name: Default
@@ -130,8 +130,8 @@ jobs:
             file: dockerfile-kasm-sublime-text
           - Name: Default
             file: dockerfile-kasm-super-tux-kart
-          - Name: Default
-            file: dockerfile-kasm-teams
+          #- Name: Default
+          #  file: dockerfile-kasm-teams
           - Name: Default
             file: dockerfile-kasm-telegram
           - Name: Default
