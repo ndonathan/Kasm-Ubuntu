@@ -16,7 +16,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
