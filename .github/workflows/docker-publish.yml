@@ -140,8 +140,8 @@ jobs:
             file: dockerfile-kasm-thunderbird
           - Name: Default
             file: dockerfile-kasm-tor-browser
-          - Name: Default
-            file: dockerfile-kasm-tracelabs
+          #- Name: Default
+          #  file: dockerfile-kasm-tracelabs
           - Name: Default
             file: dockerfile-kasm-ubuntu-focal-desktop
           - Name: Default
