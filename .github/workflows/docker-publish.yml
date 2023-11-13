@@ -30,145 +30,145 @@ jobs:
             file: dockerfile-kasm-almalinux-8-desktop
           #- Name: Default
           #  file: dockerfile-kasm-almalinux-9-desktop
-          - Name: Default
+          - Name: kasm-alpine-317-desktop
             file: dockerfile-kasm-alpine-317-desktop
-          - Name: Default
+          - Name: kasm-alpine-318-desktop
             file: dockerfile-kasm-alpine-318-desktop
-          - Name: Default
+          - Name: kasm-atom
             file: dockerfile-kasm-atom
-          - Name: Default
+          - Name: kasm-audacity
             file: dockerfile-kasm-audacity
-          - Name: Default
+          - Name: kasm-blender
             file: dockerfile-kasm-blender
-          - Name: Default
+          - Name: kasm-brave
             file: dockerfile-kasm-brave
-          - Name: Default
+          - Name: kasm-centos-7-desktop
             file: dockerfile-kasm-centos-7-desktop
-          - Name: Default
+          - Name: kasm-chrome
             file: dockerfile-kasm-chrome
-          - Name: Default
+          - Name: kasm-chromium
             file: dockerfile-kasm-chromium
-          - Name: Default
+          - Name: kasm-debian-bookworm-desktop
             file: dockerfile-kasm-debian-bookworm-desktop
-          - Name: Default
+          - Name: kasm-debian-bullseye-desktop
             file: dockerfile-kasm-debian-bullseye-desktop
-          - Name: Default
+          - Name: kasm-deluge
             file: dockerfile-kasm-deluge
-          - Name: Default
+          - Name: kasm-desktop
             file: dockerfile-kasm-desktop
-          - Name: Default
+          - Name: kasm-desktop-deluxe
             file: dockerfile-kasm-desktop-deluxe
-          - Name: Default
+          - Name: kasm-discord
             file: dockerfile-kasm-discord
-          - Name: Default
+          - Name: kasm-doom
             file: dockerfile-kasm-doom
-          - Name: Default
+          - Name: kasm-edge
             file: dockerfile-kasm-edge
-          - Name: Default
+          - Name: kasm-fedora-37-desktop
             file: dockerfile-kasm-fedora-37-desktop
-          - Name: Default
+          - Name: kasm-fedora-38-desktop
             file: dockerfile-kasm-fedora-38-desktop
-          - Name: Default
+          - Name: kasm-filezilla
             file: dockerfile-kasm-filezilla
-          - Name: Default
+          - Name: kasm-firefox
             file: dockerfile-kasm-firefox
-          - Name: Default
+          - Name: kasm-gimp
             file: dockerfile-kasm-gimp
-          - Name: Default
+          - Name: kasm-hunchly
             file: dockerfile-kasm-hunchly
-          - Name: Default
+          - Name: kasm-inkscape
             file: dockerfile-kasm-inkscape
-          - Name: Default
+          - Name: kasm-insomnia
             file: dockerfile-kasm-insomnia
-          - Name: Default
+          - Name: kams-java-dev
             file: dockerfile-kasm-java-dev
-          - Name: Default
+          - Name: kasm-kali-rolling-desktop
             file: dockerfile-kasm-kali-rolling-desktop
-          - Name: Default
+          - Name: kasm-libre-office
             file: dockerfile-kasm-libre-office
-          - Name: Default
+          - Name: kasm-maltego
             file: dockerfile-kasm-maltego
-          - Name: Default
+          - Name: kasm-minetest
             file: dockerfile-kasm-minetest
-          - Name: Default
+          - Name: kasm-only-office
             file: dockerfile-kasm-only-office
-          - Name: Default
+          - Name: kasm-opensuse-15-desktop
             file: dockerfile-kasm-opensuse-15-desktop
-          - Name: Default
+          - Name: kasm-oracle-7-desktop
             file: dockerfile-kasm-oracle-7-desktop
-          - Name: Default
+          - Name: kasm-oracle-8-desktop
             file: dockerfile-kasm-oracle-8-desktop
-          - Name: Default
+          - Name: kasm-oracle-9-desktop
             file: dockerfile-kasm-oracle-9-desktop
-          - Name: Default
+          - Name: kasm-parrotos-5-desktop
             file: dockerfile-kasm-parrotos-5-desktop
-          - Name: Default
+          - Name: kasm-pinta
             file: dockerfile-kasm-pinta
-          - Name: Default
+          - Name: kasm-postman
             file: dockerfile-kasm-postman
-          - Name: Default
+          - Name: kasm-qbittorrent
             file: dockerfile-kasm-qbittorrent
-          #- Name: Default
+          #- Name: kasm-realvnc-vncviewer
           #  file: dockerfile-kasm-realvnc-vncviewer
-          - Name: Default
+          - Name: kasm-remmina
             file: dockerfile-kasm-remmina
-          - Name: Default
+          - Name: kasm-remnux-focal-desktop
             file: dockerfile-kasm-remnux-focal-desktop
-          - Name: Default
+          - Name: kasm-retroarch
             file: dockerfile-kasm-retroarch
-          - Name: Default
+          - Name: kasm-rockylinux-8-desktop
             file: dockerfile-kasm-rockylinux-8-desktop
-          - Name: Default
+          - Name: kasm-rockylinux-9-desktop
             file: dockerfile-kasm-rockylinux-9-desktop
-          - Name: Default
+          - Name: kasm-signal
             file: dockerfile-kasm-signal
-          - Name: Default
+          - Name: kasm-slack
             file: dockerfile-kasm-slack
-          - Name: Default
+          - Name: kasm-steam
             file: dockerfile-kasm-steam
-          - Name: Default
+          - Name: kasm-sublime-text
             file: dockerfile-kasm-sublime-text
-          - Name: Default
+          - Name: kasm-super-tux-kart
             file: dockerfile-kasm-super-tux-kart
-          #- Name: Default
+          #- Name: kasm-teams
           #  file: dockerfile-kasm-teams
-          - Name: Default
+          - Name: kasm-telegram
             file: dockerfile-kasm-telegram
-          - Name: Default
+          - Name: kasm-terminal
             file: dockerfile-kasm-terminal
-          - Name: Default
+          - Name: kasm-thunderbird
             file: dockerfile-kasm-thunderbird
-          - Name: Default
+          - Name: kasm-tor-browser
             file: dockerfile-kasm-tor-browser
-          #- Name: Default
+          #- Name: kasm-tracelabs
           #  file: dockerfile-kasm-tracelabs
-          - Name: Default
+          - Name: kasm-ubuntu-focal-desktop
             file: dockerfile-kasm-ubuntu-focal-desktop
-          - Name: Default
+          - Name: kasm-ubuntu-focal-dind
             file: dockerfile-kasm-ubuntu-focal-dind
-          - Name: Default
+          - Name: kasm-ubuntu-focal-dind-rootless
             file: dockerfile-kasm-ubuntu-focal-dind-rootless
-          #- Name: Default
+          #- Name: kasm-ubuntu-jammy-desktop
           #  file: dockerfile-kasm-ubuntu-jammy-desktop
-          - Name: Default
+          - Name: kasm-ubuntu-jammy-dind
             file: dockerfile-kasm-ubuntu-jammy-dind
-          - Name: Default
+          - Name: kasm-ubuntu-jammy-dind-rootless
             file: dockerfile-kasm-ubuntu-jammy-dind-rootless
-          - Name: Default
+          - Name: kasm-unityhub
             file: dockerfile-kasm-unityhub
-          - Name: Default
+          - Name: kasm-vivaldi
             file: dockerfile-kasm-vivaldi
-          - Name: Default
+          - Name: kasm-vlc
             file: dockerfile-kasm-vlc
-          - Name: Default
+          - Name: kasm-vmware-horizon
             file: dockerfile-kasm-vmware-horizon
-          - Name: Default
+          - Name: kasm-vs-code
             file: dockerfile-kasm-vs-code
-          - Name: Default
+          - Name: kasm-wine
             file: dockerfile-kasm-wine
-          - Name: Default
+          - Name: kasm-zoom
             file: dockerfile-kasm-zoom
-          - Name: Default
+          - Name: kasm-zsnes
             file: dockerfile-kasm-zsnes
     steps:
       - name: Checkout repository
@@ -199,7 +199,7 @@ jobs:
           context: .
           file: ${{ matrix.file }}
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ndonathan/${{ matrix.Name }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
