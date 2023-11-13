@@ -24,7 +24,7 @@
       strategy:
         matrix:
           include:
-            - Name: Default
+            - Name: default
               file: Dockerfile
             - Name: valmalinux-8-desktop
               file: dockerfile-kasm-almalinux-8-desktop
