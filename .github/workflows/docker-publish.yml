@@ -1,211 +1,213 @@
 ---
-name: Docker
-on:
-  #schedule:
-  #  - cron: 22 4 * * *
-  push:
-    branches:
-      - main
-    tags:
-      - v*.*.*
-  #pull_request:
-  #  branches:
-  #    - main
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-jobs:
-  build:
-    runs-on: self-hosted
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
-    strategy:
-      matrix:
-        include:
-          - Name: Default
-            file: Dockerfile
-          - Name: valmalinux-8-desktop
-            file: dockerfile-kasm-almalinux-8-desktop
-          #- Name: Default
-          #  file: dockerfile-kasm-almalinux-9-desktop
-          - Name: kasm-alpine-317-desktop
-            file: dockerfile-kasm-alpine-317-desktop
-          - Name: kasm-alpine-318-desktop
-            file: dockerfile-kasm-alpine-318-desktop
-          - Name: kasm-atom
-            file: dockerfile-kasm-atom
-          - Name: kasm-audacity
-            file: dockerfile-kasm-audacity
-          - Name: kasm-blender
-            file: dockerfile-kasm-blender
-          - Name: kasm-brave
-            file: dockerfile-kasm-brave
-          - Name: kasm-centos-7-desktop
-            file: dockerfile-kasm-centos-7-desktop
-          - Name: kasm-chrome
-            file: dockerfile-kasm-chrome
-          - Name: kasm-chromium
-            file: dockerfile-kasm-chromium
-          - Name: kasm-debian-bookworm-desktop
-            file: dockerfile-kasm-debian-bookworm-desktop
-          - Name: kasm-debian-bullseye-desktop
-            file: dockerfile-kasm-debian-bullseye-desktop
-          - Name: kasm-deluge
-            file: dockerfile-kasm-deluge
-          - Name: kasm-desktop
-            file: dockerfile-kasm-desktop
-          - Name: kasm-desktop-deluxe
-            file: dockerfile-kasm-desktop-deluxe
-          - Name: kasm-discord
-            file: dockerfile-kasm-discord
-          - Name: kasm-doom
-            file: dockerfile-kasm-doom
-          - Name: kasm-edge
-            file: dockerfile-kasm-edge
-          - Name: kasm-fedora-37-desktop
-            file: dockerfile-kasm-fedora-37-desktop
-          - Name: kasm-fedora-38-desktop
-            file: dockerfile-kasm-fedora-38-desktop
-          - Name: kasm-filezilla
-            file: dockerfile-kasm-filezilla
-          - Name: kasm-firefox
-            file: dockerfile-kasm-firefox
-          - Name: kasm-gimp
-            file: dockerfile-kasm-gimp
-          - Name: kasm-hunchly
-            file: dockerfile-kasm-hunchly
-          - Name: kasm-inkscape
-            file: dockerfile-kasm-inkscape
-          - Name: kasm-insomnia
-            file: dockerfile-kasm-insomnia
-          - Name: kams-java-dev
-            file: dockerfile-kasm-java-dev
-          - Name: kasm-kali-rolling-desktop
-            file: dockerfile-kasm-kali-rolling-desktop
-          - Name: kasm-libre-office
-            file: dockerfile-kasm-libre-office
-          - Name: kasm-maltego
-            file: dockerfile-kasm-maltego
-          - Name: kasm-minetest
-            file: dockerfile-kasm-minetest
-          - Name: kasm-only-office
-            file: dockerfile-kasm-only-office
-          - Name: kasm-opensuse-15-desktop
-            file: dockerfile-kasm-opensuse-15-desktop
-          - Name: kasm-oracle-7-desktop
-            file: dockerfile-kasm-oracle-7-desktop
-          - Name: kasm-oracle-8-desktop
-            file: dockerfile-kasm-oracle-8-desktop
-          - Name: kasm-oracle-9-desktop
-            file: dockerfile-kasm-oracle-9-desktop
-          - Name: kasm-parrotos-5-desktop
-            file: dockerfile-kasm-parrotos-5-desktop
-          - Name: kasm-pinta
-            file: dockerfile-kasm-pinta
-          - Name: kasm-postman
-            file: dockerfile-kasm-postman
-          - Name: kasm-qbittorrent
-            file: dockerfile-kasm-qbittorrent
-          #- Name: kasm-realvnc-vncviewer
-          #  file: dockerfile-kasm-realvnc-vncviewer
-          - Name: kasm-remmina
-            file: dockerfile-kasm-remmina
-          - Name: kasm-remnux-focal-desktop
-            file: dockerfile-kasm-remnux-focal-desktop
-          - Name: kasm-retroarch
-            file: dockerfile-kasm-retroarch
-          - Name: kasm-rockylinux-8-desktop
-            file: dockerfile-kasm-rockylinux-8-desktop
-          - Name: kasm-rockylinux-9-desktop
-            file: dockerfile-kasm-rockylinux-9-desktop
-          - Name: kasm-signal
-            file: dockerfile-kasm-signal
-          - Name: kasm-slack
-            file: dockerfile-kasm-slack
-          - Name: kasm-steam
-            file: dockerfile-kasm-steam
-          - Name: kasm-sublime-text
-            file: dockerfile-kasm-sublime-text
-          - Name: kasm-super-tux-kart
-            file: dockerfile-kasm-super-tux-kart
-          #- Name: kasm-teams
-          #  file: dockerfile-kasm-teams
-          - Name: kasm-telegram
-            file: dockerfile-kasm-telegram
-          - Name: kasm-terminal
-            file: dockerfile-kasm-terminal
-          - Name: kasm-thunderbird
-            file: dockerfile-kasm-thunderbird
-          - Name: kasm-tor-browser
-            file: dockerfile-kasm-tor-browser
-          #- Name: kasm-tracelabs
-          #  file: dockerfile-kasm-tracelabs
-          - Name: kasm-ubuntu-focal-desktop
-            file: dockerfile-kasm-ubuntu-focal-desktop
-          - Name: kasm-ubuntu-focal-dind
-            file: dockerfile-kasm-ubuntu-focal-dind
-          - Name: kasm-ubuntu-focal-dind-rootless
-            file: dockerfile-kasm-ubuntu-focal-dind-rootless
-          #- Name: kasm-ubuntu-jammy-desktop
-          #  file: dockerfile-kasm-ubuntu-jammy-desktop
-          - Name: kasm-ubuntu-jammy-dind
-            file: dockerfile-kasm-ubuntu-jammy-dind
-          - Name: kasm-ubuntu-jammy-dind-rootless
-            file: dockerfile-kasm-ubuntu-jammy-dind-rootless
-          - Name: kasm-unityhub
-            file: dockerfile-kasm-unityhub
-          - Name: kasm-vivaldi
-            file: dockerfile-kasm-vivaldi
-          - Name: kasm-vlc
-            file: dockerfile-kasm-vlc
-          - Name: kasm-vmware-horizon
-            file: dockerfile-kasm-vmware-horizon
-          - Name: kasm-vs-code
-            file: dockerfile-kasm-vs-code
-          - Name: kasm-wine
-            file: dockerfile-kasm-wine
-          - Name: kasm-zoom
-            file: dockerfile-kasm-zoom
-          - Name: kasm-zsnes
-            file: dockerfile-kasm-zsnes
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Install cosign
-        if: github.event_name != 'pull_request'
-        uses: sigstore/cosign-installer@6e04d228eb30da1757ee4e1dd75a0ec73a653e06
-        with:
-          cosign-release: v2.1.1
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226
-      - name: Log into registry ${{ env.REGISTRY }}
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-      - name: Build and push Docker image
-        id: build-and-push
-        uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09
-        with:
-          context: .
-          file: ${{ matrix.file }}
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ndonathan/${{ matrix.Name }}:latest
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-      - name: Sign the published Docker image
-        if: ${{ github.event_name != 'pull_request' }}
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}
-          DIGEST: ${{ steps.build-and-push.outputs.digest }}
-        run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+  name: Docker
+  on:
+    #schedule:
+    #  - cron: 22 4 * * *
+    push:
+      branches:
+        - main
+      tags:
+        - v*.*.*
+    #pull_request:
+    #  branches:
+    #    - main
+  env:
+    REGISTRY: ghcr.io
+    IMAGE_NAME: ${{ github.repository }}
+  jobs:
+    build:
+      runs-on: self-hosted
+      permissions:
+        contents: read
+        packages: write
+        id-token: write
+      strategy:
+        matrix:
+          include:
+            - Name: Default
+              file: Dockerfile
+            - Name: valmalinux-8-desktop
+              file: dockerfile-kasm-almalinux-8-desktop
+            #- Name: Default
+            #  file: dockerfile-kasm-almalinux-9-desktop
+            - Name: kasm-alpine-317-desktop
+              file: dockerfile-kasm-alpine-317-desktop
+            - Name: kasm-alpine-318-desktop
+              file: dockerfile-kasm-alpine-318-desktop
+            - Name: kasm-atom
+              file: dockerfile-kasm-atom
+            - Name: kasm-audacity
+              file: dockerfile-kasm-audacity
+            - Name: kasm-blender
+              file: dockerfile-kasm-blender
+            - Name: kasm-brave
+              file: dockerfile-kasm-brave
+            - Name: kasm-centos-7-desktop
+              file: dockerfile-kasm-centos-7-desktop
+            - Name: kasm-chrome
+              file: dockerfile-kasm-chrome
+            - Name: kasm-chromium
+              file: dockerfile-kasm-chromium
+            - Name: kasm-debian-bookworm-desktop
+              file: dockerfile-kasm-debian-bookworm-desktop
+            - Name: kasm-debian-bullseye-desktop
+              file: dockerfile-kasm-debian-bullseye-desktop
+            - Name: kasm-deluge
+              file: dockerfile-kasm-deluge
+            - Name: kasm-desktop
+              file: dockerfile-kasm-desktop
+            - Name: kasm-desktop-deluxe
+              file: dockerfile-kasm-desktop-deluxe
+            - Name: kasm-discord
+              file: dockerfile-kasm-discord
+            - Name: kasm-doom
+              file: dockerfile-kasm-doom
+            - Name: kasm-edge
+              file: dockerfile-kasm-edge
+            - Name: kasm-fedora-37-desktop
+              file: dockerfile-kasm-fedora-37-desktop
+            - Name: kasm-fedora-38-desktop
+              file: dockerfile-kasm-fedora-38-desktop
+            - Name: kasm-filezilla
+              file: dockerfile-kasm-filezilla
+            - Name: kasm-firefox
+              file: dockerfile-kasm-firefox
+            - Name: kasm-gimp
+              file: dockerfile-kasm-gimp
+            - Name: kasm-hunchly
+              file: dockerfile-kasm-hunchly
+            - Name: kasm-inkscape
+              file: dockerfile-kasm-inkscape
+            - Name: kasm-insomnia
+              file: dockerfile-kasm-insomnia
+            - Name: kams-java-dev
+              file: dockerfile-kasm-java-dev
+            - Name: kasm-kali-rolling-desktop
+              file: dockerfile-kasm-kali-rolling-desktop
+            - Name: kasm-libre-office
+              file: dockerfile-kasm-libre-office
+            - Name: kasm-maltego
+              file: dockerfile-kasm-maltego
+            - Name: kasm-minetest
+              file: dockerfile-kasm-minetest
+            - Name: kasm-only-office
+              file: dockerfile-kasm-only-office
+            - Name: kasm-opensuse-15-desktop
+              file: dockerfile-kasm-opensuse-15-desktop
+            - Name: kasm-oracle-7-desktop
+              file: dockerfile-kasm-oracle-7-desktop
+            - Name: kasm-oracle-8-desktop
+              file: dockerfile-kasm-oracle-8-desktop
+            - Name: kasm-oracle-9-desktop
+              file: dockerfile-kasm-oracle-9-desktop
+            - Name: kasm-parrotos-5-desktop
+              file: dockerfile-kasm-parrotos-5-desktop
+            - Name: kasm-pinta
+              file: dockerfile-kasm-pinta
+            - Name: kasm-postman
+              file: dockerfile-kasm-postman
+            - Name: kasm-qbittorrent
+              file: dockerfile-kasm-qbittorrent
+            #- Name: kasm-realvnc-vncviewer
+            #  file: dockerfile-kasm-realvnc-vncviewer
+            - Name: kasm-remmina
+              file: dockerfile-kasm-remmina
+            - Name: kasm-remnux-focal-desktop
+              file: dockerfile-kasm-remnux-focal-desktop
+            - Name: kasm-retroarch
+              file: dockerfile-kasm-retroarch
+            - Name: kasm-rockylinux-8-desktop
+              file: dockerfile-kasm-rockylinux-8-desktop
+            - Name: kasm-rockylinux-9-desktop
+              file: dockerfile-kasm-rockylinux-9-desktop
+            - Name: kasm-signal
+              file: dockerfile-kasm-signal
+            - Name: kasm-slack
+              file: dockerfile-kasm-slack
+            - Name: kasm-steam
+              file: dockerfile-kasm-steam
+            - Name: kasm-sublime-text
+              file: dockerfile-kasm-sublime-text
+            - Name: kasm-super-tux-kart
+              file: dockerfile-kasm-super-tux-kart
+            #- Name: kasm-teams
+            #  file: dockerfile-kasm-teams
+            - Name: kasm-telegram
+              file: dockerfile-kasm-telegram
+            - Name: kasm-terminal
+              file: dockerfile-kasm-terminal
+            - Name: kasm-thunderbird
+              file: dockerfile-kasm-thunderbird
+            - Name: kasm-tor-browser
+              file: dockerfile-kasm-tor-browser
+            #- Name: kasm-tracelabs
+            #  file: dockerfile-kasm-tracelabs
+            - Name: kasm-ubuntu-focal-desktop
+              file: dockerfile-kasm-ubuntu-focal-desktop
+            - Name: kasm-ubuntu-focal-dind
+              file: dockerfile-kasm-ubuntu-focal-dind
+            - Name: kasm-ubuntu-focal-dind-rootless
+              file: dockerfile-kasm-ubuntu-focal-dind-rootless
+            #- Name: kasm-ubuntu-jammy-desktop
+            #  file: dockerfile-kasm-ubuntu-jammy-desktop
+            - Name: kasm-ubuntu-jammy-dind
+              file: dockerfile-kasm-ubuntu-jammy-dind
+            - Name: kasm-ubuntu-jammy-dind-rootless
+              file: dockerfile-kasm-ubuntu-jammy-dind-rootless
+            - Name: kasm-unityhub
+              file: dockerfile-kasm-unityhub
+            - Name: kasm-vivaldi
+              file: dockerfile-kasm-vivaldi
+            - Name: kasm-vlc
+              file: dockerfile-kasm-vlc
+            - Name: kasm-vmware-horizon
+              file: dockerfile-kasm-vmware-horizon
+            - Name: kasm-vs-code
+              file: dockerfile-kasm-vs-code
+            - Name: kasm-wine
+              file: dockerfile-kasm-wine
+            - Name: kasm-zoom
+              file: dockerfile-kasm-zoom
+            - Name: kasm-zsnes
+              file: dockerfile-kasm-zsnes
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Install cosign
+          if: github.event_name != 'pull_request'
+          uses: sigstore/cosign-installer@6e04d228eb30da1757ee4e1dd75a0ec73a653e06
+          with:
+            cosign-release: v2.1.1
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226
+        - name: Log into registry ${{ env.REGISTRY }}
+          if: github.event_name != 'pull_request'
+          uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d
+          with:
+            registry: ${{ env.REGISTRY }}
+            username: ${{ github.actor }}
+            password: ${{ secrets.GITHUB_TOKEN }}
+        - name: Extract Docker metadata
+          id: meta
+          uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934
+          with:
+            images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+            tags: type=raw,value=${{ matrix.Name }},enable={{is_default_branch}}
+        - name: Build and push Docker image
+          id: build-and-push
+          uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09
+          with:
+            context: .
+            file: ${{ matrix.file }}
+            push: ${{ github.event_name != 'pull_request' }}
+            tags: ${{ steps.meta.outputs.labels }}
+            labels: ${{ steps.meta.outputs.labels }}
+            cache-from: type=gha
+            cache-to: type=gha,mode=max
+        - name: Sign the published Docker image
+          if: ${{ github.event_name != 'pull_request' }}
+          env:
+            TAGS: ${{ steps.meta.outputs.tags }}
+            DIGEST: ${{ steps.build-and-push.outputs.digest }}
+          run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+  
