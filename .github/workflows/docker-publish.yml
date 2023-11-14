@@ -28,8 +28,8 @@
               file: Dockerfile
             - Name: valmalinux-8-desktop
               file: dockerfile-kasm-almalinux-8-desktop
-            #- Name: Default
-            #  file: dockerfile-kasm-almalinux-9-desktop
+            - Name: kasm-almalinux-9-desktop
+              file: dockerfile-kasm-almalinux-9-desktop
             - Name: kasm-alpine-317-desktop
               file: dockerfile-kasm-alpine-317-desktop
             - Name: kasm-alpine-318-desktop
@@ -108,8 +108,8 @@
               file: dockerfile-kasm-postman
             - Name: kasm-qbittorrent
               file: dockerfile-kasm-qbittorrent
-            #- Name: kasm-realvnc-vncviewer
-            #  file: dockerfile-kasm-realvnc-vncviewer
+            - Name: kasm-realvnc-vncviewer
+              file: dockerfile-kasm-realvnc-vncviewer
             - Name: kasm-remmina
               file: dockerfile-kasm-remmina
             - Name: kasm-remnux-focal-desktop
@@ -130,8 +130,8 @@
               file: dockerfile-kasm-sublime-text
             - Name: kasm-super-tux-kart
               file: dockerfile-kasm-super-tux-kart
-            #- Name: kasm-teams
-            #  file: dockerfile-kasm-teams
+            - Name: kasm-teams
+              file: dockerfile-kasm-teams
             - Name: kasm-telegram
               file: dockerfile-kasm-telegram
             - Name: kasm-terminal
@@ -140,16 +140,16 @@
               file: dockerfile-kasm-thunderbird
             - Name: kasm-tor-browser
               file: dockerfile-kasm-tor-browser
-            #- Name: kasm-tracelabs
-            #  file: dockerfile-kasm-tracelabs
+            - Name: kasm-tracelabs
+              file: dockerfile-kasm-tracelabs
             - Name: kasm-ubuntu-focal-desktop
               file: dockerfile-kasm-ubuntu-focal-desktop
             - Name: kasm-ubuntu-focal-dind
               file: dockerfile-kasm-ubuntu-focal-dind
             - Name: kasm-ubuntu-focal-dind-rootless
               file: dockerfile-kasm-ubuntu-focal-dind-rootless
-            #- Name: kasm-ubuntu-jammy-desktop
-            #  file: dockerfile-kasm-ubuntu-jammy-desktop
+            - Name: kasm-ubuntu-jammy-desktop
+              file: dockerfile-kasm-ubuntu-jammy-desktop
             - Name: kasm-ubuntu-jammy-dind
               file: dockerfile-kasm-ubuntu-jammy-dind
             - Name: kasm-ubuntu-jammy-dind-rootless
